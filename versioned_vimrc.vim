@@ -80,6 +80,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 
