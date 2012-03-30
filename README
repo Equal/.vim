@@ -1,0 +1,5 @@
+Don't forget to set
+
+so ~/.vim/versioned_vimrc.vim
+
+credit to MattCL for the idea to source control
