@@ -24,13 +24,18 @@ map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 "close nerdtree if only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+"Show commands when entered
+set showcmd
 
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "enable syntax
 
 set background=dark
-
+let g:solarized_termtrans = 1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 colorscheme solarized
 
 set t_Co=256
@@ -81,6 +86,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on
 
@@ -88,3 +94,6 @@ filetype plugin indent on
 "POWERLINE
 set laststatus=2
 set encoding=utf-8
+
+"NERDCOMMENTER
+let mapleader = ","
