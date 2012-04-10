@@ -77,7 +77,7 @@ nnoremap N Nzz
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/vundle.git
 call vundle#rc()
 
 "let Vundle manage Vundle
