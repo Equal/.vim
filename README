@@ -1,10 +1,5 @@
-Don't forget to set
-
-so ~/.vim/versioned_vimrc.vim
-
-in your .vimrc
-
-After cloning, cd to .vim and run git submodule update --init.
-Open up an install of vim and run the :BundleInstall command
+1) Set 'so ~/.vim/versioned_vimrc.vim' in your .vimrc
+2) After cloning, cd to .vim and run git submodule update --init.
+3) Open up an instance of vim and run the :BundleInstall command
 
 credit to MattCL for the idea to source control
