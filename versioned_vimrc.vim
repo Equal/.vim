@@ -7,6 +7,8 @@ set cursorline
 "Ctrl+N x2 toggles line numbers
 nmap <C-N><C-N> :set invnumber<CR>
 
+set wildmenu
+
 
 set ignorecase
 set smartcase
