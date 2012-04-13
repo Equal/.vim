@@ -99,3 +99,6 @@ set encoding=utf-8
 
 "NERDCOMMENTER
 let mapleader = ","
+
+"put vim in interactive mode
+set shellcmdflag=-ic
