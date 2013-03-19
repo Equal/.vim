@@ -27,6 +27,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "Show commands when entered
 set showcmd
 
+"Show the filename
+set title
+
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "enable syntax
