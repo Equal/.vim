@@ -85,9 +85,25 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on
 
+
+" CtrlP
+ let g:ctrlp_map = '<c-p>'
+ let g:ctrlp_cmd = 'CtrlP'
+ let g:ctrlp_arg_map = 1
+ let g:ctrlp_max_height = 20
+ let g:ctrlp_clear_cache_on_exit = 0
+" the directory at work is ridiculously huge
+ let g:ctrlp_max_files = 40000
+
+ let g:ctrlp_custom_ignore = {
+     \ 'dir': '\v[\/]\.(git|hg|svn)$',
+     \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo)$'
+     \ }
 
 "POWERLINE
 set laststatus=2
