@@ -34,8 +34,9 @@ set title
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "enable syntax
 
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+set background=dark
 colorscheme solarized
 
 set t_Co=256
