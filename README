@@ -1,5 +1,6 @@
 1) Set 'so ~/.vim/versioned_vimrc.vim' in your .vimrc
-2) After cloning, cd to .vim and run git submodule update --init.
-3) Open up an instance of vim and run the :BundleInstall command
+2) Open up an instance of vim, and say 'y' when asked to install plugins
+
+*Note - Unite is configured to use ack-grep, so it helps to have that installed. It *should* work with grep just fine otherwise, but it will be much slower.
 
 credit to MattCL for the idea to source control
