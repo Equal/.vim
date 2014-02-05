@@ -19,11 +19,6 @@ set magic "Set magic on, for regexps
 
 set showmatch "Show matching brackets when text indicator on top of one
 
-"toggle nerdtree
-map <F2> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-"close nerdtree if only window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 "Show commands when entered
 set showcmd
 
@@ -43,14 +38,7 @@ set t_Co=256
 
 set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 
-
 set encoding=utf8
-
-try
-	lang en_US
-catch
-endtry
-
 set ffs=unix,dos,mac
 
 "Text, tab, and indents
@@ -73,24 +61,42 @@ nnoremap N Nzz
 
 "PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-"VUNDLE
-set nocompatible
+"NeoBundle
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
 filetype off
 
-set rtp+=~/.vim/vundle
-call vundle#rc()
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-"let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+"let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
+"VimProc!
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'scrooloose/syntastic'
+
+NeoBundle 'Shougo/unite.vim'
+
+let bundle = neobundle#get('unite.vim')
 
 filetype plugin indent on
 
+NeoBundleCheck
 
 " CtrlP
  let g:ctrlp_map = '<c-p>'
@@ -112,6 +118,16 @@ set encoding=utf-8
 
 "NERDCOMMENTER
 let mapleader = ","
+
+"UNITE OPTIONS
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+map ,/ :Unite grep:.<CR>
+
+if executable('ack-grep')
+    let g:unite_source_grep_command='ack-grep'
+    let g:unite_source_grep_default_opts='--no-heading --no-color -a -C4'
+    let g:unite_source_grep_recursive_opt=''
+endif
 
 "put vim in interactive mode
 set shellcmdflag=-ic
