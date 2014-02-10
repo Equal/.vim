@@ -29,10 +29,10 @@ set title
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "enable syntax
 
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
-set background=dark
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 colorscheme solarized
+set background=light
 
 set t_Co=256
 
@@ -131,3 +131,10 @@ endif
 
 "put vim in interactive mode
 set shellcmdflag=-ic
+
+
+""ETC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nobackup "dont create .swo
+set noswapfile "dont create .swp
+set wildignore=*.o,*~,*.pyc,*.swp,*.bak,*.swo,*.ho,*.hi,*.beam "ignore compiled files
