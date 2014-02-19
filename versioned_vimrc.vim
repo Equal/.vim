@@ -31,8 +31,8 @@ syntax enable "enable syntax
 
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-colorscheme solarized
 set background=light
+colorscheme solarized
 
 set t_Co=256
 
