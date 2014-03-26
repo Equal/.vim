@@ -25,6 +25,9 @@ set showcmd
 "Show the filename
 set title
 
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
+
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "enable syntax
@@ -108,7 +111,7 @@ NeoBundleCheck
  let g:ctrlp_max_files = 40000
 
  let g:ctrlp_custom_ignore = {
-     \ 'dir': '\v[\/]\.(git|hg|svn|dist)$',
+     \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build',
      \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo|hi|o|p_o|p_hi)$'
      \ }
 
@@ -121,6 +124,8 @@ let mapleader = ","
 
 "UNITE OPTIONS
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <C-o> :Unite file_rec/async<cr>
+nnoremap <C-i> :Unite -quick-match buffer<cr>
 map ,/ :Unite grep:.<CR>
 
 if executable('ack-grep')
@@ -138,3 +143,7 @@ set shellcmdflag=-ic
 set nobackup "dont create .swo
 set noswapfile "dont create .swp
 set wildignore=*.o,*~,*.pyc,*.swp,*.bak,*.swo,*.ho,*.hi,*.beam "ignore compiled files
+
+nnoremap <C-h> :bprevious<cr>
+nnoremap <C-l> :bnext<cr>
+nnoremap ,q :bp\|bd #<cr>
