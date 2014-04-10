@@ -25,7 +25,7 @@ set showcmd
 "Show the filename
 set title
 
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:>-,trail:~,extends:>,precedes:<
 set list
 
 " Colors and Fonts
