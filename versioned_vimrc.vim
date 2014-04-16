@@ -95,6 +95,8 @@ NeoBundle 'scrooloose/syntastic'
 
 NeoBundle 'Shougo/unite.vim'
 
+NeoBundle 'sudo.vim'
+
 let bundle = neobundle#get('unite.vim')
 
 filetype plugin indent on
