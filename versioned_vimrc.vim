@@ -91,7 +91,8 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic', { 'rev' : '3ebdeabf63eb2f093ccd79c1c9f4d8e198488d5b' }
+NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'Shougo/unite.vim'
 
