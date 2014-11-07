@@ -7,6 +7,8 @@ set cursorline
 "Ctrl+N x2 toggles line numbers
 nmap <C-N><C-N> :set invnumber<CR>
 
+set fdm=indent
+
 set wildmenu
 set ignorecase
 set smartcase
@@ -34,7 +36,7 @@ syntax enable "enable syntax
 
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-set background=light
+set background=dark
 colorscheme solarized
 
 set t_Co=256
@@ -91,7 +93,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'scrooloose/syntastic', { 'rev' : '3ebdeabf63eb2f093ccd79c1c9f4d8e198488d5b' }
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'Shougo/unite.vim'
