@@ -126,7 +126,6 @@ NeoBundleCheck
 set laststatus=2
 set encoding=utf-8
 
-"NERDCOMMENTER
 let mapleader = ","
 
 "UNITE OPTIONS
