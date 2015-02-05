@@ -153,3 +153,5 @@ set wildignore=*.o,*~,*.pyc,*.swp,*.bak,*.swo,*.ho,*.hi,*.beam "ignore compiled 
 nnoremap <C-h> :bprevious<cr>
 nnoremap <C-l> :bnext<cr>
 nnoremap ,q :bp\|bd #<cr>
+
+nnoremap ,jc Oconsole.log('<C-R>=expand("%:t")<cr>:<C-R>=line('.')<cr>');<Esc>
