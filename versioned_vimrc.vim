@@ -46,6 +46,8 @@ set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 set encoding=utf8
 set ffs=unix,dos,mac
 
+au BufNewFile,BufRead *.haml* set syntax=haml
+
 "Text, tab, and indents
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
@@ -116,7 +118,7 @@ NeoBundleCheck
  let g:ctrlp_max_files = 40000
 
  let g:ctrlp_custom_ignore = {
-     \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build',
+     \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build|tmp|node_modules',
      \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo|hi|o|p_o|p_hi)$'
      \ }
 
