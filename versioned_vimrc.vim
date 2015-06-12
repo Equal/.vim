@@ -7,8 +7,6 @@ set cursorline
 "Ctrl+N x2 toggles line numbers
 nmap <C-N><C-N> :set invnumber<CR>
 
-set fdm=indent
-
 set wildmenu
 set ignorecase
 set smartcase
@@ -97,6 +95,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'mustache/vim-mustache-handlebars'
 
 NeoBundle 'Shougo/unite.vim'
 
