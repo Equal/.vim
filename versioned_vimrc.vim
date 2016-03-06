@@ -49,12 +49,11 @@ au BufNewFile,BufRead *.haml* set syntax=haml
 "Text, tab, and indents
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
-set shiftwidth=4
-set tabstop=4
-set smarttab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 
 set ai "Auto Indent
-set si "Smart Indent
 
 vnoremap < <gv
 vnoremap > >gv
@@ -91,20 +90,19 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'embear/vim-localvimrc'
+NeoBundle 'tpope/vim-surround'
+let g:localvimrc_persistent = 2
 
-NeoBundle 'Shougo/unite.vim'
 
 NeoBundle 'sudo.vim'
 
-let bundle = neobundle#get('unite.vim')
-
-filetype plugin indent on
+filetype on
 
 NeoBundleCheck
 
@@ -118,7 +116,7 @@ NeoBundleCheck
  let g:ctrlp_max_files = 40000
 
  let g:ctrlp_custom_ignore = {
-     \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build|tmp|node_modules',
+     \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build|tmp|node_modules|bower_components',
      \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo|hi|o|p_o|p_hi)$'
      \ }
 
@@ -127,18 +125,6 @@ set laststatus=2
 set encoding=utf-8
 
 let mapleader = ","
-
-"UNITE OPTIONS
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <C-o> :Unite file_rec/async<cr>
-nnoremap <C-i> :Unite -quick-match buffer<cr>
-map ,/ :Unite grep:.<CR>
-
-if executable('ack-grep')
-    let g:unite_source_grep_command='ack-grep'
-    let g:unite_source_grep_default_opts='--no-heading --no-color -a -C4'
-    let g:unite_source_grep_recursive_opt=''
-endif
 
 "put vim in interactive mode
 set shellcmdflag=-ic
