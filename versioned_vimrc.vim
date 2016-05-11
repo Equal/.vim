@@ -71,7 +71,7 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-filetype off
+filetype plugin on
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
@@ -95,6 +95,10 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+
+NeoBundle 'jeroenbourgois/vim-actionscript'
+autocmd BufRead *.as set filetype=actionscript
+
 NeoBundle 'embear/vim-localvimrc'
 NeoBundle 'tpope/vim-surround'
 let g:localvimrc_persistent = 2
@@ -107,18 +111,17 @@ filetype on
 NeoBundleCheck
 
 " CtrlP
- let g:ctrlp_map = '<c-p>'
- let g:ctrlp_cmd = 'CtrlP'
- let g:ctrlp_arg_map = 1
- let g:ctrlp_max_height = 20
- let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_arg_map = 1
+let g:ctrlp_max_height = 20
+let g:ctrlp_clear_cache_on_exit = 0
 " the directory at work is ridiculously huge
- let g:ctrlp_max_files = 40000
-
- let g:ctrlp_custom_ignore = {
-     \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build|tmp|node_modules|bower_components',
-     \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo|hi|o|p_o|p_hi)$'
-     \ }
+let g:ctrlp_max_files = 40000
+let g:ctrlp_custom_ignore = {
+   \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build|tmp|node_modules|bower_components',
+   \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo|hi|o|p_o|p_hi)$'
+   \ }
 
 "POWERLINE
 set laststatus=2
