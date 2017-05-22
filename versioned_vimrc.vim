@@ -119,7 +119,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 " the directory at work is ridiculously huge
 let g:ctrlp_max_files = 40000
 let g:ctrlp_custom_ignore = {
-   \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build|tmp|node_modules|bower_components',
+   \ 'dir': '\v[\/]\.(git|hg|svn|dist)$|build|tmp|node_modules|bower_components|vendor',
    \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo|hi|o|p_o|p_hi)$'
    \ }
 
@@ -128,9 +128,6 @@ set laststatus=2
 set encoding=utf-8
 
 let mapleader = ","
-
-"put vim in interactive mode
-set shellcmdflag=-ic
 
 
 ""ETC
