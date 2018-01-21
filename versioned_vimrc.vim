@@ -97,6 +97,7 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'embear/vim-localvimrc'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'leafgarland/typescript-vim'
 let g:localvimrc_persistent = 2
 
 
