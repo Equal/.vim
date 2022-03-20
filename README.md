@@ -1,3 +1,5 @@
+## DEPRECATED - SEE https://github.com/Equal/dotfiles INSTEAD
+
 1) Set 'so ~/.vim/versioned_vimrc.vim' in your .vimrc
 2) Open up an instance of vim, and say 'y' when asked to install plugins
 
